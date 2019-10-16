@@ -4,14 +4,19 @@
   "description": "Microservices for reports",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "babel-node ./server"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ignisMX/ReportEngine.git"
   },
   "keywords": [
-    "pdf"
+    "pdf",
+    "reports",
+    "barcode",
+    "inventory",
+    "invoice"
   ],
   "author": "ignisMX",
   "license": "ISC",
@@ -26,6 +31,7 @@
     "@babel/cli": "^7.6.4",
     "@babel/core": "^7.6.4",
     "@babel/node": "^7.6.3",
-    "@babel/plugin-proposal-class-properties": "^7.5.5"
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/preset-env": "^7.6.3"
   }
 }
