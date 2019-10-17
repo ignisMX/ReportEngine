@@ -4,7 +4,7 @@
   "description": "Microservices for reports",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --watchAll",
     "start": "babel-node ./server"
   },
   "repository": {
@@ -25,13 +25,15 @@
   },
   "homepage": "https://github.com/ignisMX/ReportEngine#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "html-pdf": "^2.2.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.6.4",
     "@babel/core": "^7.6.4",
     "@babel/node": "^7.6.3",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
-    "@babel/preset-env": "^7.6.3"
+    "@babel/preset-env": "^7.6.3",
+    "jest": "^24.9.0"
   }
 }
