@@ -1,3 +1,5 @@
+import { readFile } from '../pdf';
+
 export const createLabel = (data) => {
     return `<div>${data.barcode}</div>`;
 }
@@ -13,7 +15,14 @@ export const flatLabels = (data) => {
     return labels;
 }
 
-export const buildSheet = () => {
-    let file = readFile('../html/index.html');
-    
+export const createLabelGrid = (data) => {
+    let labels =  flatLabels(data);
+    labels = labels.map(element => createLabel(element));
+    labels = labels.join('');
+    return labels;
+}
+
+export const createSheet = (labels) => {
+    let file = readFile('../templates/html/index.html');
+    return file.replace('content',labels);
 }
