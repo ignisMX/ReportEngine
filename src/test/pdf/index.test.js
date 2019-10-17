@@ -1,6 +1,6 @@
 import { readFile } from '../../pdf';
 
-describe('Barcode', () => {
+describe('PDF', () => {
     it('readFile: Should return content of index.html as string', () => {
         const result = readFile('../templates/html/index.html');
 
